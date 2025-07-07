@@ -107,7 +107,7 @@ h2 {
 
 /* Change button color when hovered */
 .donate-button:hover {
-  background-color: #159A48; /* Dark Green */
+  background-color: #FF902A; /* Dark Green */
   transform: translateY(-2px) scale(1.04); /* Slight lift */
 }
 
@@ -129,6 +129,15 @@ section {
     padding: 32px 8px;
     font-size: 1em;
   }
+
+@media (max-width: 768px) {
+  .hero-text {
+    font-size: 1.8rem;
+  }
+  .model-button, .donate-button {
+    width: 90%;
+  }
+}
 
   /* Make headline font size smaller so it fits on small screens */
   .hero h1 {
@@ -181,9 +190,17 @@ section {
 
 
 /* New Custom Styles for the page */
+header {
+  text-align: center;
+}
 header .logo img {
-  width: 200px;
-  margin: 16px;
+  display: flex;
+  width: 50px;
+  margin: 16px auto;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
 }
 .hero {
   position: relative;
@@ -249,10 +266,10 @@ header .logo img {
 }
 
 .model-button:hover {
-  background-color: #159A48; /* dark green hover */
+  background-color: #FFC907; /* yellow hover */
 }.model-button {
-  background-color: #2E9DF7;
-  color: white;
+  background-color: #FFC907;
+  color: #222;
   padding: 14px 30px;
   border: none;
   border-radius: 25px;
@@ -265,18 +282,25 @@ header .logo img {
 }
 
 .model-button:hover {
-  background-color: #159A48; /* dark green hover */
+  background-color: #FFC907;/* yellow hover */
 }
 .promise {
-  background-color: #2E9DF7;
-  color: white;
-  padding: 20px;
+  background-color: #FFC907;
+  color: #222;
+  padding: 20px 16px;
   border-radius: 15px;
   max-width: 800px;
   margin: 20px auto;
   font-size: 1rem;
+  font-weight: bold;
   line-height: 1.5;
+  transition: background-color 0.3s;
 }
+.promise:hover
+  {
+  background-color: #FFC907; /* yellow hover */
+}
+
 .donate-button {
   background-color: #FFC907;
   color: #222;
@@ -286,15 +310,17 @@ header .logo img {
   font-weight: bold;
   font-size: 1rem;
   cursor: pointer;
-  margin-top: 20px;
+  margin: 20px auto 0 auto;
+  display: block;
   transition: background-color 0.3s;
 }
 
 .donate-button:hover {
-  background-color: #FF902A; /* orange hover */
+  background-color: #FFC907; /* orange hover */
 }
 .payment-logos {
   margin-top: 15px;
+  text-align: center;
 }
 
 .payment-logos img {
